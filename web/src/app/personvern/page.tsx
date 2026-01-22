@@ -1,9 +1,17 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 
-export const metadata = {
-  title: "Personvern | Øen Webdesign",
-  description: "Personvernpolicy for Øen Webdesign. Les om hvordan vi samler inn og behandler personopplysninger.",
+export const metadata: Metadata = {
+  title: "Personvern",
+  description: "Personvernpolicy for Øen Webdesign. Les om hvordan vi samler inn og behandler personopplysninger i henhold til norsk personvernlovgivning.",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://studio-oeen.vercel.app/personvern",
+  },
 };
 
 export default function PersonvernPage() {

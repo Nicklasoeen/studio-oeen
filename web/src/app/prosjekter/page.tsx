@@ -1,14 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { getProjects } from "@/lib/queries";
 import { urlFor } from "@/lib/sanity";
 import Header from "@/components/Header";
 
 export const revalidate = 60;
 
-export const metadata = {
-  title: "Prosjekter | Øen Webdesign",
-  description: "Se hvordan jeg har forvandlet idéer til virkelighet, og oppdag historiene bak vellykkede prosjekter som skaper ekte verdi.",
+export const metadata: Metadata = {
+  title: "Prosjekter",
+  description: "Se eksempler på nettsider og digitale løsninger jeg har utviklet. Fra moderne nettsider til komplekse webapplikasjoner - se hvordan jeg har hjulpet bedrifter med å modernisere sin digitale tilstedeværelse.",
+  keywords: ["webdesign prosjekter", "nettside eksempler", "web utvikling prosjekter", "portfolio", "case studies", "webdesign Norge"],
+  openGraph: {
+    title: "Prosjekter | Øen Webdesign",
+    description: "Se eksempler på nettsider og digitale løsninger jeg har utviklet. Fra moderne nettsider til komplekse webapplikasjoner.",
+    url: "https://studio-oeen.vercel.app/prosjekter",
+  },
+  alternates: {
+    canonical: "https://studio-oeen.vercel.app/prosjekter",
+  },
 };
 
 export default async function ProsjekterPage() {

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { getProject, getProjects } from "@/lib/queries";
 import { urlFor } from "@/lib/sanity";
 import { PortableText } from "next-sanity";
@@ -17,7 +18,7 @@ export async function generateStaticParams() {
 }
 
 // Generate metadata
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const project = await getProject(slug);
   
@@ -27,9 +28,47 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
   
+  const title = `${project.client} - ${project.title}`;
+  const description = project.excerpt || project.subheading || `Nettside og digital løsning for ${project.client}. ${project.title}.`;
+  const categories = project.categories?.map((cat: string) => {
+    const labels: Record<string, string> = {
+      'nettside': 'Nettside',
+      'system': 'System',
+      'grafisk': 'Grafisk',
+      'app': 'App',
+      'e-handel': 'E-handel',
+      'innholdsproduksjon': 'Innholdsproduksjon'
+    };
+    return labels[cat] || cat;
+  }).join(', ') || '';
+  
   return {
-    title: `${project.client} | Øen Webdesign`,
-    description: project.excerpt || project.subheading,
+    title,
+    description,
+    keywords: [
+      "webdesign prosjekt",
+      project.client,
+      categories,
+      "nettside utvikling",
+      "digital løsning"
+    ].filter(Boolean),
+    openGraph: {
+      title,
+      description,
+      url: `https://studio-oeen.vercel.app/prosjekter/${slug}`,
+      type: "website",
+      ...(project.mainImage && {
+        images: [{
+          url: urlFor(project.mainImage).width(1200).height(630).url(),
+          width: 1200,
+          height: 630,
+          alt: `${project.title} - ${project.client}`,
+        }],
+      }),
+    },
+    alternates: {
+      canonical: `https://studio-oeen.vercel.app/prosjekter/${slug}`,
+    },
   };
 }
 

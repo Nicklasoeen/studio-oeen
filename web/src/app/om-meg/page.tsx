@@ -9,11 +9,22 @@ const ImageShowcase = dynamic(() => import("@/components/ImageShowcase"), {
   loading: () => <div className="min-h-[400px]" />,
 });
 
+import type { Metadata } from "next";
+
 export const revalidate = 60;
 
-export const metadata = {
-  title: "Om meg | Øen Webdesign",
-  description: "En webdesigner som moderniserer og gir nytt liv i gamle nettsider. Med erfaring innen de fleste webteknologier kan jeg skreddersy nettsider av de fleste typer.",
+export const metadata: Metadata = {
+  title: "Om meg",
+  description: "Jeg er en dedikert webdesigner og utvikler som brenner for å skape nettsider som både ser bra ut og fungerer sømløst. Med erfaring innen Next.js, React og moderne webteknologier hjelper jeg bedrifter med å modernisere sine digitale løsninger.",
+  keywords: ["webdesigner", "web utvikler", "Next.js utvikler", "React utvikler", "webdesign Norge", "freelance webdesigner"],
+  openGraph: {
+    title: "Om meg | Øen Webdesign",
+    description: "Jeg er en dedikert webdesigner og utvikler som brenner for å skape nettsider som både ser bra ut og fungerer sømløst.",
+    url: "https://studio-oeen.vercel.app/om-meg",
+  },
+  alternates: {
+    canonical: "https://studio-oeen.vercel.app/om-meg",
+  },
 };
 
 const services = [

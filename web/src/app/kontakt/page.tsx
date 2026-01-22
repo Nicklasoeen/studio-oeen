@@ -1,10 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 
-export const metadata = {
-  title: "Kontakt | Øen Webdesign",
-  description: "Ta kontakt for en uforpliktende prat om hvordan jeg kan hjelpe deg med ditt neste prosjekt.",
+export const metadata: Metadata = {
+  title: "Kontakt",
+  description: "Ta kontakt for en uforpliktende prat om ditt neste webdesign-prosjekt. Jeg hjelper med modernisering av nettsider, utvikling av nye digitale løsninger og forbedring av brukeropplevelsen.",
+  keywords: ["kontakt webdesigner", "webdesign konsultasjon", "nettside hjelp", "web utvikling kontakt"],
+  openGraph: {
+    title: "Kontakt | Øen Webdesign",
+    description: "Ta kontakt for en uforpliktende prat om ditt neste webdesign-prosjekt.",
+    url: "https://studio-oeen.vercel.app/kontakt",
+  },
+  alternates: {
+    canonical: "https://studio-oeen.vercel.app/kontakt",
+  },
 };
 
 export default function KontaktPage() {

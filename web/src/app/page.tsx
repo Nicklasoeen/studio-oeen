@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import type { Metadata } from "next";
 import { getFeaturedProjects, getFeaturedTestimonials } from "@/lib/queries";
 import { urlFor } from "@/lib/sanity";
 import Header from "@/components/Header";
@@ -15,13 +16,62 @@ const ImageShowcase = dynamic(() => import("@/components/ImageShowcase"), {
 
 export const revalidate = 60;
 
+export const metadata: Metadata = {
+  title: "Hjem",
+  description: "Jeg hjelper bedrifter med å transformere utdaterte nettsider til moderne digitale opplevelser. Spesialisert på webdesign, nettsideutvikling og modernisering av eksisterende nettsider med Next.js og React.",
+  keywords: ["webdesign", "nettside utvikling", "modernisering nettsider", "Next.js", "React", "webdesigner", "digital design"],
+  openGraph: {
+    title: "Øen Webdesign | Modernisering og utvikling av nettsider",
+    description: "Jeg hjelper bedrifter med å transformere utdaterte nettsider til moderne digitale opplevelser som tiltrekker kunder, bygger tillit og driver vekst.",
+    url: "https://studio-oeen.vercel.app",
+  },
+  alternates: {
+    canonical: "https://studio-oeen.vercel.app",
+  },
+};
+
 export default async function Home() {
   const [projects, testimonials] = await Promise.all([
     getFeaturedProjects(),
     getFeaturedTestimonials(),
   ]);
+
+  // Structured data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Øen Webdesign",
+    "description": "Profesjonell webdesign og utvikling av moderne nettsider. Modernisering av utdaterte nettsider og utvikling av nye digitale løsninger.",
+    "url": "https://studio-oeen.vercel.app",
+    "logo": "https://studio-oeen.vercel.app/logo/new-oeen-black.svg",
+    "image": "https://studio-oeen.vercel.app/logo/new-oeen-black.svg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ekrhovdbakken 1",
+      "addressLocality": "Kolltveit",
+      "postalCode": "5360",
+      "addressCountry": "NO"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+47-994-08-474",
+      "contactType": "customer service",
+      "email": "nicklas.lodoen.oen@gmail.com"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Norge"
+    },
+    "serviceType": ["Webdesign", "Nettsideutvikling", "Modernisering av nettsider", "Digital design"],
+    "knowsAbout": ["Next.js", "React", "TypeScript", "Webdesign", "UX Design", "UI Design", "Responsive Design"]
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Header />
 
       {/* Hero Section */}

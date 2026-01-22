@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://studio-oeen.vercel.app/sitemap.xml
+
