@@ -14,7 +14,10 @@
    - Sign in with your GitHub account
    - Click "Add New Project"
    - Import your repository
-   - Vercel will auto-detect the Next.js app in the `web` folder
+   - **Project Name**: Use a unique name (e.g., `studio-oeen-web`, `oeen-webdesign`)
+   - **Framework Preset**: Select "Next.js" (not Sanity)
+   - **Root Directory**: Set to `web`
+   - Vercel will auto-detect the Next.js app
 
 3. **Configure Environment Variables**:
    In Vercel project settings, add these environment variables:
