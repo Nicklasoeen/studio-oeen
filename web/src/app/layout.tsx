@@ -59,6 +59,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://studio-oeen.vercel.app",
   },
+  icons: {
+    icon: "/logo/Oeen (4).png",
+    apple: "/logo/Oeen (4).png",
+  },
 };
 
 export default function RootLayout({
@@ -69,6 +73,9 @@ export default function RootLayout({
   return (
     <html lang="no">
       <head>
+        {/* Favicon */}
+        <link rel="icon" href="/logo/Oeen (4).png" type="image/png" />
+        <link rel="apple-touch-icon" href="/logo/Oeen (4).png" />
         {/* Preconnect to critical third-party origins */}
         <link rel="preconnect" href="https://cdn.sanity.io" />
         <link rel="dns-prefetch" href="https://cdn.sanity.io" />
