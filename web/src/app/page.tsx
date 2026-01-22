@@ -18,7 +18,7 @@ const ImageShowcase = dynamic(() => import("@/components/ImageShowcase"), {
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "Hjem",
+  title: "Webdesign og Nettsideutvikling | Øen Webdesign",
   description: "Jeg hjelper bedrifter med å transformere utdaterte nettsider til moderne digitale opplevelser. Spesialisert på webdesign, nettsideutvikling og modernisering av eksisterende nettsider med Next.js og React.",
   keywords: ["webdesign", "nettside utvikling", "modernisering nettsider", "Next.js", "React", "webdesigner", "digital design"],
   openGraph: {
