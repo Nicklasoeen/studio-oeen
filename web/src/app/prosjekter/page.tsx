@@ -124,6 +124,22 @@ export default async function ProsjekterPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
                 </Link>
+                
+                {/* Contact Info */}
+                <div className="mt-6 sm:mt-8 space-y-2 sm:space-y-3">
+                  <a 
+                    href="mailto:hei@oeen.no" 
+                    className="block text-sm sm:text-base text-white/70 hover:text-white transition-colors"
+                  >
+                    hei@oeen.no
+                  </a>
+                  <a 
+                    href="tel:+4799408474" 
+                    className="block text-sm sm:text-base text-white/70 hover:text-white transition-colors"
+                  >
+                    +47 994 08 474
+                  </a>
+                </div>
               </div>
 
               {/* Right - Navigation */}
