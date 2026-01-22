@@ -57,7 +57,7 @@ export default async function Home() {
       "@type": "ContactPoint",
       "telephone": "+47-994-08-474",
       "contactType": "customer service",
-      "email": "nicklas.lodoen.oen@gmail.com"
+      "email": "hei@oeen.no"
     },
     "areaServed": {
       "@type": "Country",

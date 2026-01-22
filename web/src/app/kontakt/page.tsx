@@ -45,10 +45,10 @@ export default function KontaktPage() {
                   <div>
                     <span className="text-xs sm:text-sm text-gray-500 mb-1.5 sm:mb-2 block">E-post</span>
                     <a 
-                      href="mailto:nicklas.lodoen.oen@gmail.com" 
+                      href="mailto:hei@oeen.no" 
                       className="group inline-flex items-center gap-2 sm:gap-3 text-base sm:text-xl font-medium text-black hover:text-gray-600 transition-colors break-all sm:break-normal"
                     >
-                      nicklas.lodoen.oen@gmail.com
+                      hei@oeen.no
                       <svg className="h-4 w-4 sm:h-5 sm:w-5 shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                       </svg>

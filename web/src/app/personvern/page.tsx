@@ -64,7 +64,7 @@ export default function PersonvernPage() {
                     Norge
                   </p>
                   <p className="text-base sm:text-lg text-gray-700 mt-4">
-                    E-post: <a href="mailto:nicklas.lodoen.oen@gmail.com" className="text-black hover:underline">nicklas.lodoen.oen@gmail.com</a><br />
+                    E-post: <a href="mailto:hei@oeen.no" className="text-black hover:underline">hei@oeen.no</a><br />
                     Telefon: <a href="tel:+4799408474" className="text-black hover:underline">+47 994 08 474</a>
                   </p>
                 </div>
@@ -185,8 +185,8 @@ export default function PersonvernPage() {
                 </ul>
                 <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">
                   For å utøve dine rettigheter, kan du kontakte oss på e-post:{" "}
-                  <a href="mailto:nicklas.lodoen.oen@gmail.com" className="text-black hover:underline">
-                    nicklas.lodoen.oen@gmail.com
+                  <a href="mailto:hei@oeen.no" className="text-black hover:underline">
+                    hei@oeen.no
                   </a>
                 </p>
               </section>
@@ -247,7 +247,7 @@ export default function PersonvernPage() {
                 <div className="bg-gray-50 rounded-lg p-6 mb-4">
                   <p className="text-base sm:text-lg text-gray-700">
                     <strong>Øen Webdesign</strong><br />
-                    E-post: <a href="mailto:nicklas.lodoen.oen@gmail.com" className="text-black hover:underline">nicklas.lodoen.oen@gmail.com</a><br />
+                    E-post: <a href="mailto:hei@oeen.no" className="text-black hover:underline">hei@oeen.no</a><br />
                     Telefon: <a href="tel:+4799408474" className="text-black hover:underline">+47 994 08 474</a>
                   </p>
                 </div>
