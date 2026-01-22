@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import { getFeaturedProjects, getFeaturedTestimonials } from "@/lib/queries";
 import { urlFor } from "@/lib/sanity";
+import { siteUrl } from "@/lib/config";
 import Header from "@/components/Header";
 
 // Lazy load below-fold components to reduce initial JS bundle
@@ -23,10 +24,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Øen Webdesign | Modernisering og utvikling av nettsider",
     description: "Jeg hjelper bedrifter med å transformere utdaterte nettsider til moderne digitale opplevelser som tiltrekker kunder, bygger tillit og driver vekst.",
-    url: "https://studio-oeen.vercel.app",
+    url: siteUrl,
   },
   alternates: {
-    canonical: "https://studio-oeen.vercel.app",
+    canonical: siteUrl,
   },
 };
 
@@ -42,9 +43,9 @@ export default async function Home() {
     "@type": "ProfessionalService",
     "name": "Øen Webdesign",
     "description": "Profesjonell webdesign og utvikling av moderne nettsider. Modernisering av utdaterte nettsider og utvikling av nye digitale løsninger.",
-    "url": "https://studio-oeen.vercel.app",
-    "logo": "https://studio-oeen.vercel.app/logo/new-oeen-black.svg",
-    "image": "https://studio-oeen.vercel.app/logo/new-oeen-black.svg",
+    "url": siteUrl,
+    "logo": `${siteUrl}/logo/new-oeen-black.svg`,
+    "image": `${siteUrl}/logo/new-oeen-black.svg`,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Ekrhovdbakken 1",

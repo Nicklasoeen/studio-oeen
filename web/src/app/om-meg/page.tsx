@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import type { Metadata } from "next";
 import { getFeaturedTestimonials } from "@/lib/queries";
+import { siteUrl } from "@/lib/config";
 import Header from "@/components/Header";
 
 // Lazy load below-fold components
@@ -20,10 +22,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Om meg | Øen Webdesign",
     description: "Jeg er en dedikert webdesigner og utvikler som brenner for å skape nettsider som både ser bra ut og fungerer sømløst.",
-    url: "https://studio-oeen.vercel.app/om-meg",
+    url: `${siteUrl}/om-meg`,
   },
   alternates: {
-    canonical: "https://studio-oeen.vercel.app/om-meg",
+    canonical: `${siteUrl}/om-meg`,
   },
 };
 

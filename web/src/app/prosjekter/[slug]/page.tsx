@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getProject, getProjects } from "@/lib/queries";
 import { urlFor } from "@/lib/sanity";
+import { siteUrl } from "@/lib/config";
 import { PortableText } from "next-sanity";
 import Header from "@/components/Header";
 
@@ -55,7 +56,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title,
       description,
-      url: `https://studio-oeen.vercel.app/prosjekter/${slug}`,
+      url: `${siteUrl}/prosjekter/${slug}`,
       type: "website",
       ...(project.mainImage && {
         images: [{
@@ -67,7 +68,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       }),
     },
     alternates: {
-      canonical: `https://studio-oeen.vercel.app/prosjekter/${slug}`,
+      canonical: `${siteUrl}/prosjekter/${slug}`,
     },
   };
 }

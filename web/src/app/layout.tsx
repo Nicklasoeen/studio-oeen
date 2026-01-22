@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Manrope } from "next/font/google";
+import { siteUrl } from "@/lib/config";
 import "./globals.css";
 
 // Only load font weights actually used in the design
@@ -13,7 +14,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://studio-oeen.vercel.app'),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Øen Webdesign | Modernisering og utvikling av nettsider",
     template: "%s | Øen Webdesign"
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "no_NO",
-    url: "https://studio-oeen.vercel.app",
+    url: siteUrl,
     siteName: "Øen Webdesign",
     title: "Øen Webdesign | Modernisering og utvikling av nettsider",
     description: "Profesjonell webdesign og utvikling av moderne nettsider. Jeg hjelper bedrifter med å modernisere utdaterte nettsider og utvikle nye digitale løsninger.",
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
     images: ["/logo/new-oeen-black.svg"],
   },
   alternates: {
-    canonical: "https://studio-oeen.vercel.app",
+    canonical: siteUrl,
   },
   icons: {
     icon: "/logo/Oeen (4).png",

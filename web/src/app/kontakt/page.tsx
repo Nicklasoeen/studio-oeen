@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { siteUrl } from "@/lib/config";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
@@ -10,10 +11,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Kontakt | Øen Webdesign",
     description: "Ta kontakt for en uforpliktende prat om ditt neste webdesign-prosjekt.",
-    url: "https://studio-oeen.vercel.app/kontakt",
+    url: `${siteUrl}/kontakt`,
   },
   alternates: {
-    canonical: "https://studio-oeen.vercel.app/kontakt",
+    canonical: `${siteUrl}/kontakt`,
   },
 };
 

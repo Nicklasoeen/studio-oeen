@@ -1,8 +1,9 @@
 import { MetadataRoute } from 'next'
 import { getProjects } from '@/lib/queries'
+import { siteUrl } from '@/lib/config'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://studio-oeen.vercel.app'
+  const baseUrl = siteUrl
   
   // Get all projects for dynamic routes
   const projects = await getProjects()

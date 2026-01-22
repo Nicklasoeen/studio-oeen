@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getProjects } from "@/lib/queries";
 import { urlFor } from "@/lib/sanity";
+import { siteUrl } from "@/lib/config";
 import Header from "@/components/Header";
 
 export const revalidate = 60;
@@ -14,10 +15,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Prosjekter | Øen Webdesign",
     description: "Se eksempler på nettsider og digitale løsninger jeg har utviklet. Fra moderne nettsider til komplekse webapplikasjoner.",
-    url: "https://studio-oeen.vercel.app/prosjekter",
+    url: `${siteUrl}/prosjekter`,
   },
   alternates: {
-    canonical: "https://studio-oeen.vercel.app/prosjekter",
+    canonical: `${siteUrl}/prosjekter`,
   },
 };
 

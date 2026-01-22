@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { siteUrl } from "@/lib/config";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://studio-oeen.vercel.app/personvern",
+    canonical: `${siteUrl}/personvern`,
   },
 };
 
