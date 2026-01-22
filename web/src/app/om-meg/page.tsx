@@ -11,8 +11,6 @@ const ImageShowcase = dynamic(() => import("@/components/ImageShowcase"), {
   loading: () => <div className="min-h-[400px]" />,
 });
 
-import type { Metadata } from "next";
-
 export const revalidate = 60;
 
 export const metadata: Metadata = {
