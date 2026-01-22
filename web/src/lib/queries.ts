@@ -2,7 +2,7 @@ import { client } from './sanity'
 
 // Fetch all posts
 export async function getPosts() {
-  const query = `*[_type == "post"] | order(publishedAt desc) {
+  const query = `*[_type == "post" && !(_id in path("drafts.**"))] | order(publishedAt desc) {
     _id,
     title,
     slug,
@@ -20,7 +20,7 @@ export async function getPosts() {
 
 // Fetch a single post by slug
 export async function getPost(slug: string) {
-  const query = `*[_type == "post" && slug.current == $slug][0] {
+  const query = `*[_type == "post" && slug.current == $slug && !(_id in path("drafts.**"))][0] {
     _id,
     title,
     slug,
@@ -33,7 +33,7 @@ export async function getPost(slug: string) {
 
 // Fetch all projects
 export async function getProjects() {
-  const query = `*[_type == "project"] | order(order asc, completedAt desc) {
+  const query = `*[_type == "project" && !(_id in path("drafts.**"))] | order(order asc, completedAt desc) {
     _id,
     title,
     slug,
@@ -59,7 +59,7 @@ export async function getProjects() {
 
 // Fetch featured projects
 export async function getFeaturedProjects() {
-  const query = `*[_type == "project" && featured == true] | order(order asc, completedAt desc) {
+  const query = `*[_type == "project" && featured == true && !(_id in path("drafts.**"))] | order(order asc, completedAt desc) {
     _id,
     title,
     slug,
@@ -81,7 +81,7 @@ export async function getFeaturedProjects() {
 
 // Fetch a single project by slug
 export async function getProject(slug: string) {
-  const query = `*[_type == "project" && slug.current == $slug][0] {
+  const query = `*[_type == "project" && slug.current == $slug && !(_id in path("drafts.**"))][0] {
     _id,
     title,
     slug,
@@ -103,7 +103,7 @@ export async function getProject(slug: string) {
 
 // Fetch featured testimonials
 export async function getFeaturedTestimonials() {
-  const query = `*[_type == "testimonial" && featured == true] | order(order asc) {
+  const query = `*[_type == "testimonial" && featured == true && !(_id in path("drafts.**"))] | order(order asc) {
     _id,
     quote,
     author,
