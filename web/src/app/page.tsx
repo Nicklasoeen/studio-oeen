@@ -18,15 +18,13 @@ const ImageShowcase = dynamic(() => import("@/components/ImageShowcase"), {
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "Webdesign og Nettsideutvikling | Profesjonell Webdesigner i Norge",
-  description: "Øen Webdesign tilbyr profesjonell webdesign og nettsideutvikling. Jeg hjelper bedrifter med å modernisere utdaterte nettsider og utvikle nye digitale løsninger. Spesialisert på moderne webdesign, responsive nettsider og optimalisering for søkemotorer. Kontakt meg for en uforpliktende prat om ditt neste webdesign-prosjekt.",
-  keywords: ["webdesign", "nettside", "nettsideutvikling", "webdesigner", "webdesign Norge", "nettside utvikler", "modernisering nettsider", "responsive webdesign", "Next.js", "React", "digital design", "web utvikling", "SEO", "brukeropplevelse", "UX design"],
+  title: "Webdesign og Nettsideutvikling | Øen Webdesign",
+  description: "Jeg hjelper bedrifter med å transformere utdaterte nettsider til moderne digitale opplevelser. Spesialisert på webdesign, nettsideutvikling og modernisering av eksisterende nettsider med Next.js og React.",
+  keywords: ["webdesign", "nettside utvikling", "modernisering nettsider", "Next.js", "React", "webdesigner", "digital design"],
   openGraph: {
-    title: "Webdesign og Nettsideutvikling | Øen Webdesign",
-    description: "Profesjonell webdesign og nettsideutvikling i Norge. Jeg hjelper bedrifter med å modernisere utdaterte nettsider og utvikle nye digitale løsninger som tiltrekker kunder, bygger tillit og driver vekst.",
+    title: "Øen Webdesign | Modernisering og utvikling av nettsider",
+    description: "Jeg hjelper bedrifter med å transformere utdaterte nettsider til moderne digitale opplevelser som tiltrekker kunder, bygger tillit og driver vekst.",
     url: siteUrl,
-    type: "website",
-    locale: "no_NO",
   },
   alternates: {
     canonical: siteUrl,
@@ -44,7 +42,7 @@ export default async function Home() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Øen Webdesign",
-    "description": "Profesjonell webdesign og nettsideutvikling i Norge. Jeg hjelper bedrifter med å modernisere utdaterte nettsider, utvikle nye digitale løsninger og optimalisere for søkemotorer. Spesialisert på moderne webdesign, responsive nettsider og brukeropplevelse.",
+    "description": "Profesjonell webdesign og utvikling av moderne nettsider. Modernisering av utdaterte nettsider og utvikling av nye digitale løsninger.",
     "url": siteUrl,
     "logo": `${siteUrl}/logo/new-oeen-black.svg`,
     "image": `${siteUrl}/logo/new-oeen-black.svg`,
@@ -59,16 +57,14 @@ export default async function Home() {
       "@type": "ContactPoint",
       "telephone": "+47-994-08-474",
       "contactType": "customer service",
-      "email": "hei@oeen.no",
-      "availableLanguage": "Norwegian"
+      "email": "hei@oeen.no"
     },
     "areaServed": {
       "@type": "Country",
       "name": "Norge"
     },
-    "serviceType": ["Webdesign", "Nettsideutvikling", "Modernisering av nettsider", "Digital design", "Responsive webdesign", "SEO", "Brukeropplevelse"],
-    "knowsAbout": ["Next.js", "React", "TypeScript", "Webdesign", "Nettside", "UX Design", "UI Design", "Responsive Design", "Søkemotoroptimalisering"],
-    "keywords": "webdesign, nettside, nettsideutvikling, webdesigner, webdesign Norge, responsive design, SEO"
+    "serviceType": ["Webdesign", "Nettsideutvikling", "Modernisering av nettsider", "Digital design"],
+    "knowsAbout": ["Next.js", "React", "TypeScript", "Webdesign", "UX Design", "UI Design", "Responsive Design"]
   };
 
   return (
@@ -85,7 +81,7 @@ export default async function Home() {
           {/* Services Tags */}
           <div className="mb-6 sm:mb-8">
             <span className="text-xs sm:text-sm text-gray-600">
-              Webdesign · Nettsider · Branding · Hosting
+              Nettsider · Branding · Hosting
             </span>
           </div>
 
@@ -95,22 +91,14 @@ export default async function Home() {
             <span className="text-gray-400">som tiltrekker kunder, bygger tillit og driver vekst.</span>
           </h1>
 
-          {/* SEO-friendly intro text */}
-          <div className="mt-6 sm:mt-8 max-w-3xl">
-            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-              Som erfaren webdesigner og utvikler spesialiserer jeg meg på å skape moderne nettsider som kombinerer profesjonelt design med avansert teknologi. Jeg tilbyr alt fra komplett nettsideutvikling og modernisering av eksisterende nettsider til optimalisering for søkemotorer og forbedring av brukeropplevelsen. Med fokus på responsive design, rask lastetid og brukervennlighet, hjelper jeg bedrifter i hele Norge med å styrke sin digitale tilstedeværelse.
-            </p>
-          </div>
-
           {/* CTA Button */}
           <div className="mt-8 sm:mt-10">
             <Link
               href="/kontakt"
               className="group inline-flex items-center gap-2 rounded-full border border-black bg-black px-5 py-3 sm:px-6 sm:py-4 text-sm font-medium text-white transition-all hover:bg-white hover:text-black"
-              aria-label="Kontakt meg for webdesign og nettsideutvikling"
             >
               Kom i kontakt
-              <svg className="h-4 w-4 transition-transform duration-300 group-hover:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <svg className="h-4 w-4 transition-transform duration-300 group-hover:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
               </svg>
             </Link>
@@ -121,16 +109,6 @@ export default async function Home() {
       {/* Projects Grid Section */}
       <section id="prosjekter" className="px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16">
         <div className="mx-auto max-w-screen-2xl">
-          {/* SEO-friendly section intro */}
-          <div className="mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-medium text-black mb-4">
-              Webdesign og Nettsideutvikling Prosjekter
-            </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-3xl leading-relaxed">
-              Utforsk eksempler på nettsider og digitale løsninger jeg har utviklet for bedrifter i ulike bransjer. Fra moderne nettsider til komplekse webapplikasjoner – hvert prosjekt er skreddersydd for å møte kundens unike behov og mål.
-            </p>
-          </div>
-
           {projects?.length > 0 ? (
             <>
               {/* First Project - Full Width */}
@@ -150,7 +128,7 @@ export default async function Home() {
                     {projects[0].mainImage ? (
                       <Image
                         src={urlFor(projects[0].mainImage).width(2400).height(1350).quality(80).auto("format").url()}
-                        alt={`${projects[0].client} - ${projects[0].title} nettside utviklet av Øen Webdesign`}
+                        alt={projects[0].title}
                         fill
                         priority
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1536px"
@@ -159,7 +137,7 @@ export default async function Home() {
                     ) : (
                       <Image
                         src="/image-gen (9).png"
-                        alt="Moderne nettside design og utvikling eksempel - Øen Webdesign"
+                        alt="Website mockup"
                         fill
                         priority
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1536px"
@@ -211,14 +189,14 @@ export default async function Home() {
                         {project.mainImage ? (
                           <Image
                             src={urlFor(project.mainImage).width(1200).height(900).quality(75).auto("format").url()}
-                            alt={`${project.client} - ${project.title} webdesign prosjekt utviklet av Øen Webdesign`}
+                            alt={project.title}
                             fill
                             loading="lazy"
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                             className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                           />
                         ) : (
-                          <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-600 transition-transform duration-500 group-hover:scale-[1.02]" aria-label="Webdesign prosjekt placeholder" />
+                          <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-600 transition-transform duration-500 group-hover:scale-[1.02]" />
                         )}
                       </div>
                       
@@ -260,7 +238,7 @@ export default async function Home() {
                 {/* Placeholder Image */}
                 <Image
                   src="/image-gen (9).png"
-                  alt="Moderne nettside design og webdesign eksempel - Øen Webdesign"
+                  alt="Website mockup"
                   fill
                   priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1536px"
@@ -279,9 +257,7 @@ export default async function Home() {
       </section>
 
       {/* Services Section */}
-      <section aria-label="Webdesign tjenester">
-        <ServicesSection />
-      </section>
+      <ServicesSection />
 
       {/* Visual Showcase Section */}
       <ImageShowcase testimonials={testimonials} />
@@ -297,13 +273,10 @@ export default async function Home() {
             
             {/* Heading */}
             <div className="flex-1 max-w-3xl">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium leading-[1.2] tracking-[-0.02em] mb-4">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium leading-[1.2] tracking-[-0.02em]">
                 <span className="text-black">Se hvordan vi har gjort idéer om til virkelighet.</span>{" "}
                 <span className="text-gray-400">Bli med inn i historiene bak vellykkede design som virkelig gjør en forskjell.</span>
               </h2>
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                Utforsk vårt portefølje av webdesign og nettsideutvikling prosjekter. Fra moderne nettsider til komplekse digitale løsninger – hvert prosjekt viser vår ekspertise innen webdesign, brukeropplevelse og teknisk utvikling. <Link href="/prosjekter" className="text-black underline hover:no-underline">Se alle prosjekter</Link> for å få inspirasjon til ditt neste webdesign-prosjekt.
-              </p>
             </div>
             
             {/* Button */}
@@ -311,10 +284,9 @@ export default async function Home() {
               <Link
                 href="/prosjekter"
                 className="group inline-flex items-center gap-2 rounded-full border border-gray-200 px-5 py-3 text-sm font-medium text-black transition-all hover:border-black"
-                aria-label="Se alle webdesign og nettsideutvikling prosjekter"
               >
                 Se flere
-                <svg className="h-4 w-4 transition-transform duration-300 group-hover:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <svg className="h-4 w-4 transition-transform duration-300 group-hover:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
                 </svg>
               </Link>
