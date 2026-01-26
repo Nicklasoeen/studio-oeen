@@ -27,15 +27,15 @@ export default function KontaktPage() {
       <main className="pt-24 sm:pt-28 lg:pt-40 pb-16 sm:pb-20 lg:pb-32">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-screen-2xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-24">
+            <div className="max-w-2xl">
               
-              {/* Left Column - Content */}
+              {/* Content */}
               <div>
                 <span className="text-xs sm:text-sm text-gray-500 mb-4 sm:mb-6 block">Kontakt</span>
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-medium leading-[1.15] tracking-[-0.02em] text-black mb-4 sm:mb-6">
                   La oss skape noe fantastisk sammen
                 </h1>
-                <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-10 sm:mb-12 max-w-lg">
+                <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-10 sm:mb-12">
                   Har du et prosjekt i tankene, eller bare lyst til en uforpliktende prat? Jeg er alltid åpen for nye muligheter og spennende samarbeid.
                 </p>
 
@@ -95,28 +95,6 @@ export default function KontaktPage() {
                 </div>
               </div>
 
-              {/* Right Column - Photo & Info */}
-              <div className="hidden lg:flex flex-col items-start justify-start ml-auto">
-                <div className="relative w-[448px] aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-gray-700 to-gray-900 mb-6">
-                  <Image
-                    src="/ansatt-transparent.png"
-                    alt="Nicklas Øen"
-                    fill
-                    className="object-cover"
-                    priority
-                    sizes="448px"
-                  />
-                </div>
-                
-                {/* About Info */}
-                <div className="w-full max-w-md text-left">
-                  <h3 className="text-xl font-medium text-black mb-2">Nicklas Øen</h3>
-                  <p className="text-sm text-gray-600 mb-4">Webdesigner & Utvikler</p>
-                  <p className="text-base text-gray-700 leading-relaxed">
-                    Jeg er en dedikert utvikler og designer som brenner for å skape nettsider som både ser bra ut og fungerer sømløst. Med erfaring innen de fleste webteknologier kan jeg skreddersy løsninger som passer akkurat ditt behov.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
