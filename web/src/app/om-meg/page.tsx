@@ -127,17 +127,39 @@ export default async function OmMegPage() {
             
             {/* Right Content */}
             <div className="flex-1 max-w-4xl">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium leading-[1.2] tracking-[-0.02em] mb-6 sm:mb-10">
-                <span className="text-black">Jeg er en dedikert utvikler og designer som brenner for å skape nettsider som både ser bra ut og fungerer sømløst.</span>
-              </h2>
+              <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 mb-6 sm:mb-10">
+                {/* Text Content */}
+                <div className="flex-1">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium leading-[1.2] tracking-[-0.02em] mb-6 sm:mb-8">
+                    <span className="text-black">Jeg er en dedikert utvikler og designer som brenner for å skape nettsider som både ser bra ut og fungerer sømløst.</span>
+                  </h2>
+                  
+                  <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-gray-600 leading-relaxed">
+                    <p>
+                      For meg handler hvert prosjekt om mer enn bare design, det handler om å gi bedrifter et digitalt uttrykk de kan være stolte av, og som virkelig representerer hvem de er.
+                    </p>
+                    <p>
+                      Jeg jobber tett med kundene mine og legger vekt på å forstå virksomheten deres, målene deres og det som gjør dem unike. Det gjør at jeg kan skreddersy løsninger som ikke bare er teknisk solide, men også gjennomtenkte, brukervennlige og visuelt tydelige.
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Photo */}
+                <div className="lg:w-80 shrink-0">
+                  <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-gray-700 to-gray-900">
+                    <Image
+                      src="/ansatt-transparent.png"
+                      alt="Nicklas Øen"
+                      fill
+                      className="object-cover"
+                      loading="lazy"
+                      sizes="(max-width: 1024px) 100vw, 320px"
+                    />
+                  </div>
+                </div>
+              </div>
               
               <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-gray-600 leading-relaxed">
-                <p>
-                  For meg handler hvert prosjekt om mer enn bare design, det handler om å gi bedrifter et digitalt uttrykk de kan være stolte av, og som virkelig representerer hvem de er.
-                </p>
-                <p>
-                  Jeg jobber tett med kundene mine og legger vekt på å forstå virksomheten deres, målene deres og det som gjør dem unike. Det gjør at jeg kan skreddersy løsninger som ikke bare er teknisk solide, men også gjennomtenkte, brukervennlige og visuelt tydelige.
-                </p>
                 <p>
                   Med lidenskap for faget og øye for detaljer leverer jeg arbeid som kombinerer kreativitet, struktur og kvalitet. Målet mitt er alltid det samme: å bygge nettsider som gjør en forskjell for deg, for kundene dine og for merkevaren din.
                 </p>
