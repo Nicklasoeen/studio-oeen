@@ -132,6 +132,7 @@ export default function TjenesterPage() {
                   {services.map((service) => (
                     <li key={service.id}>
                       <button
+                        onMouseEnter={() => setActiveId(service.id)}
                         onClick={() => scrollToSection(service.id)}
                         style={{
                           fontVariationSettings: activeId === service.id ? '"wght" 700' : '"wght" 400',
