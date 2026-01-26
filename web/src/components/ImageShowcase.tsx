@@ -46,14 +46,14 @@ export default function ImageShowcase({ testimonials }: ImageShowcaseProps) {
               {testimonial.image ? (
                 <Image
                   src={urlFor(testimonial.image).width(1920).height(840).quality(75).auto("format").url()}
-                  alt="Kundeprosjekt"
+                  alt={testimonial.project?.title ? `${testimonial.project.title} - Webdesign prosjekt av ${testimonial.author}` : `Kundereferanse fra ${testimonial.author} - Webdesign og nettsideutvikling`}
                   fill
                   loading="lazy"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1536px"
                   className="object-cover"
                 />
               ) : (
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-black" />
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-black" aria-label="Kundereferanse placeholder" />
               )}
             </div>
           ))}
