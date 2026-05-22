@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Manrope } from "next/font/google";
 import { siteUrl } from "@/lib/config";
 import "./globals.css";
@@ -61,8 +63,8 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   icons: {
-    icon: "/logo/Oeen (4).png",
-    apple: "/logo/Oeen (4).png",
+    icon: [{ url: "/logo/favicon.png", type: "image/png" }],
+    apple: "/logo/favicon.png",
   },
 };
 
@@ -74,9 +76,6 @@ export default function RootLayout({
   return (
     <html lang="no">
       <head>
-        {/* Favicon */}
-        <link rel="icon" href="/logo/Oeen (4).png" type="image/png" />
-        <link rel="apple-touch-icon" href="/logo/Oeen (4).png" />
         {/* Preconnect to critical third-party origins */}
         <link rel="preconnect" href="https://cdn.sanity.io" />
         <link rel="dns-prefetch" href="https://cdn.sanity.io" />
@@ -96,6 +95,8 @@ export default function RootLayout({
           `}
         </Script>
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
